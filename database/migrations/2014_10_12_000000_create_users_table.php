@@ -18,7 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->binary('avatar');
+            $table->string('avatar')->nullable();
+            $table->integer('active');
             $table->timestamps();
         });
     }

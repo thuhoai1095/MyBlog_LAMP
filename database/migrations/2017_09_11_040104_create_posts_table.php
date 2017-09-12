@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('summary');
             $table->text('content');
             $table->integer('like');
-            $table->binary('image');
+            $table->string('image');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
